@@ -1,11 +1,7 @@
 import spinner from "../assets/spinner.gif";
-import { stringToDom } from "../common/common.ts";
+import { stringToDom, ruDate } from "../common/common.ts";
 
 const issueContainer = document.querySelector(".content-container .list-group");
-
-const ruDate = (time) => {
-  return new Date(time).toLocaleString('ru');
-}
 
 const createIssueTemplate = (issue) => {
   return `

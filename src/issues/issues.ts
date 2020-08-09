@@ -3,15 +3,19 @@ import { stringToDom } from "../common/common.ts";
 
 const issueContainer = document.querySelector(".content-container .list-group");
 
+const ruDate = (time) => {
+  return new Date(time).toLocaleString('ru');
+}
+
 const createIssueTemplate = (issue) => {
   return `
     <a href="#" class="list-group-item list-group-item-action">
+      <b>${issue.number}</b>
+      <small>${ruDate(issue.created_at)}</small>
       <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1">${issue.title}</h5>
-        <small>3 days ago</small>
+        <h6 class="mb-1">${issue.title}</h6>
       </div>
-      <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-      <small>Donec id elit non mi porta.</small>
+      <p class="mb-1">${issue.body}</p>
     </a>
   `;
 };

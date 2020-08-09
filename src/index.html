@@ -8,16 +8,16 @@
   </head>
   <body>
     <div class="content-container">
-      <form class="form-inline">
+      <form class="form-inline" id="issue-search-form">
         <div class="form-row align-items-center">
           <div class="col-auto">
-            <label class="sr-only" for="repository">Repository</label>
-            <input type="text" class="form-control mb-2" id="repository" placeholder="Repository">
+            <label class="sr-only" for="username">Username</label>
+            <input type="text" class="form-control mb-2" name="username" id="username" placeholder="Username">
           </div>
           <div class="col-auto">
-            <label class="sr-only" for="username">Username</label>
+            <label class="sr-only" for="repository">Repository</label>
             <div class="input-group mb-2">
-              <input type="text" class="form-control" id="username" placeholder="Username">
+              <input type="text" class="form-control" name="repository" id="repository" placeholder="Repository">
             </div>
           </div>
           <div class="col-auto">
@@ -25,35 +25,8 @@
           </div>
         </div>
       </form>
-      <div class="list-group">
-        <a href="#" class="list-group-item list-group-item-action">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">List group item heading</h5>
-            <small>3 days ago</small>
-          </div>
-          <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-          <small>D
 
-
-            nec id elit non mi porta.</small>
-        </a>
-        <a href="#" class="list-group-item list-group-item-action">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">List group item heading</h5>
-            <small class="text-muted">3 days ago</small>
-          </div>
-          <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-          <small class="text-muted">Donec id elit non mi porta.</small>
-        </a>
-        <a href="#" class="list-group-item list-group-item-action">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">List group item heading</h5>
-            <small class="text-muted">3 days ago</small>
-          </div>
-          <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-          <small class="text-muted">Donec id elit non mi porta.</small>
-        </a>
-      </div>
+      <div class="list-group"></div>
     </div>
     <div class="notification-container"></div>
   </body>

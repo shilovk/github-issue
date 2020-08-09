@@ -1,9 +1,9 @@
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const PluginAnalizer = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const path = require('path');
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+// const PluginAnalizer = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+// const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const path = require("path");
 
 module.exports = {
   mode: "development",
@@ -26,10 +26,10 @@ module.exports = {
   module: {
     rules: [
       {
-        enforce: 'pre',
+        enforce: "pre",
         test: /\.(js|ts?)$/,
         exclude: /node_modules/,
-        loader: 'eslint-loader',
+        loader: "eslint-loader",
         options: {
           fix: true,
           failOnError: false,
@@ -37,21 +37,21 @@ module.exports = {
       },
       {
         test: /\.ts?$/,
-        use: ['babel-loader', 'ts-loader'],
+        use: ["babel-loader", "ts-loader"],
         exclude: /node_modules/,
       },
       {
         test: /\.js?$/,
-        loader: 'babel-loader',
+        loader: "babel-loader",
         exclude: /node_modules/,
       },
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader']
+        use: [MiniCssExtractPlugin.loader, "css-loader"]
       },
       {
         test: /\.(jpg|png|gif|svg)$/,
-        use: ['file-loader']
+        use: ["file-loader"]
       },
       {
         test: /\.less$/,
@@ -60,10 +60,10 @@ module.exports = {
             loader: MiniCssExtractPlugin.loader,
           },
           {
-            loader: 'css-loader',
+            loader: "css-loader",
           },
           {
-            loader: 'less-loader',
+            loader: "less-loader",
             options: {
               lessOptions: {
                 strictMath: true,

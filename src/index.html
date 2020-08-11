@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github issue</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="content-container">
+      <form class="form-inline" id="issue-search-form">
+        <div class="form-row align-items-center">
+          <div class="col-auto">
+            <label class="sr-only" for="username">Username</label>
+            <input type="text" class="form-control mb-2" name="username" id="username" placeholder="Username">
+          </div>
+          <div class="col-auto">
+            <label class="sr-only" for="repository">Repository</label>
+            <div class="input-group mb-2">
+              <input type="text" class="form-control" name="repository" id="repository" placeholder="Repository">
+            </div>
+          </div>
+          <div class="col-auto">
+            <button type="submit" class="btn btn-primary mb-2">Search</button>
+          </div>
+        </div>
+      </form>
+
+      <div class="list-group"></div>
+    </div>
+    <div class="notification-container"></div>
+  </body>
+</html>
